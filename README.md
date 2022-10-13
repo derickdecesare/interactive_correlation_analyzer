@@ -1,33 +1,10 @@
-# Correlation_Analysis
+# Interactive Correlation Analyzer
 
-### Protecting Portfolios Using Correlation Diversification
+### De-Risk Your Portfolio With Uncorrelated Assets
 
-Project Description/ Outline:
+Ray Dalio states that "With fifteen to twenty good, uncorrelated return streams, you can dramatically reduce your risks without reducing your expected returns". Therefore, finding un-correlated assets (i.e., The price movement of one does not effect the other) is paramount for creating an great portfolio. After the 2020 pandemic however, correlations across sectors have increased substantialy, making uncorrelated assets difficult to find. 
 
-We all want rewards without risk. A balanced investment portfolio offers increased growth while minimizing the potential for loss.One of the best way to do this by examining the correlation between various assets and allocating your portfolio accordingly, incorporating uncorrelated  and even negatively correlated assets.
-
-In this study, we chose 17 popular alternative assets and the stock market, as measured by the S&P 500 to determine how they were correlated historically. We outlined the assets with a strong correlation and moderate correlation as well as those that are uncorrelated and negatively correlated.
-
-
-Since correlation is only one of several important factors in constructing a strong and diversified portfolio, and so should not be the only influence in deciding which stocks to buy. To determine the sectors with the most investment potential we did the further analysis. Tools we used to determine the sectors with the most investment potential :
-* Standard deviations, 
-* Sharpe ratios, 
-* Betas,
-* Monte Carlo Simulations,
-* Pearson Correlation Coefficient and
-* McKenzie Test
-* Data Visualization
-
-
-After identifying the attractive  assets , we constructed a financial application that provides the user the ability to search for available assets that will measure their performance, volatility, risk and risk-return profile by making some adjustments relating to timeframe , weight composition and number of samples in order to make a better investment decisions.
-
- This app will also run the Monte Carlo Simulation to forecast the performance of the selected assets that will help the user to analyze the most probable outcomes of real world scenarios in an environment that’s safe and efficient.
-
-
-Our objective is to search through various market sectors and find those that are least correlated to each other historically. We will analyze different economic sectors plus equities, bonds, cryptocurrency, commodities and currencies.  By using a diverse set of tools such as MC Simulations, Numpy, and Pandas we will then attempt to predict which market sectors will stay uncorrelated in the future by performing quantitative analysis.   
-
-Ultimately, we want to know how each sector correlates with the rest of the market. Uncorrelated strategies diversify risk and may protect against catastrophic losses across a portfolio.   This application seeks to identify opportunities to invest in non-correlated assets to diversify portfolio.
-
+Our Interactive Correlation Analyzer helps solve this problem by allowing users to visualize correlations across market sectors and time horizons and to perform risk/reward analysis on different asset combinations.
 
 
 ## Technologies
