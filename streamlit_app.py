@@ -8,14 +8,14 @@ import matplotlib.pyplot as plt
 import datetime
 import functions
 from io import BytesIO
-import pyautogui
+# import pyautogui
 from MCForecastTools import MCSimulation
 import urllib.request
 import altair as alt
 
-def rerun_script():
+# def rerun_script():
 
-    pyautogui.hotkey("ctrl","F5")
+#     pyautogui.hotkey("ctrl","F5")
     #st.experimental_rerun()
 
 st.set_option('deprecation.showPyplotGlobalUse', False)  #<-- This disables plot warnings in streamlit

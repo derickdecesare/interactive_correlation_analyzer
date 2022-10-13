@@ -8,7 +8,6 @@ numpy
 seaborn
 datetime
 requires.io
-pyautogui
 forecast-tools
 urllib3
 altair
