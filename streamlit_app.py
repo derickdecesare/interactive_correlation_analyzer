@@ -495,8 +495,8 @@ if counter != 0: #Get data if any boxes are checked
         with col3:
             pass
         with col2:
-            st.write('')
-            st.button('Reboot App')
+            # st.write('')
+            # st.button('Reboot App')
 
             
 if counter == 0: #Welcome page - nothing checked
