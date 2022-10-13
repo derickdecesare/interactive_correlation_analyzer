@@ -495,6 +495,7 @@ if counter != 0: #Get data if any boxes are checked
         with col3:
             pass
         with col2:
+            pass
             # st.write('')
             # st.button('Reboot App')
 
