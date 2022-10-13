@@ -9,7 +9,7 @@ seaborn
 datetime
 requires.io
 pyautogui
-MCForecastTools
+forecast-tools
 urllib3
 altair
 python-time
