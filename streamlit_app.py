@@ -501,7 +501,7 @@ if counter != 0: #Get data if any boxes are checked
             
 if counter == 0: #Welcome page - nothing checked
 
-    st.markdown("<h1 style='text-align: center; color: black;'>Welcome To The Zoom Team 6 Correlation Analyzer</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: black;'>Interactive Correlation Analyzer</h1>", unsafe_allow_html=True)
     st.write()
     st.write('')
     st.markdown("<h0 style='text-align: center; color: black; font-size: 15pt;'>This application conducts correlation studies between economic sectors and various indices. \
