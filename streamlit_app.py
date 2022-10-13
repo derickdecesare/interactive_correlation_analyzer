@@ -488,15 +488,15 @@ if counter != 0: #Get data if any boxes are checked
                 st.write(result)
                 st.write('')
                 
-        col1, col2, col3 = st.columns(3)
+        # col1, col2, col3 = st.columns(3)
 
-        with col1:
-            pass
-        with col3:
-            pass
-        with col2:
-            st.write('')
-            st.button('Reboot App', on_click=rerun_script)
+        # with col1:
+        #     pass
+        # with col3:
+        #     pass
+        # with col2:
+        #     st.write('')
+        #     st.button('Reboot App', on_click=rerun_script)
 
             
 if counter == 0: #Welcome page - nothing checked
