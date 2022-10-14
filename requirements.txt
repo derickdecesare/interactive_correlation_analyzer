@@ -14,4 +14,3 @@ altair
 python-time
 alpaca-trade-api
 python-dotenv
-hvplot.pandas
