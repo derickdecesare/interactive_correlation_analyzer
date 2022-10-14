@@ -12,6 +12,7 @@ from io import BytesIO
 from MCForecastTools import MCSimulation
 import urllib.request
 import altair as alt
+import hvplot.pandas
 
 # def rerun_script():
 
@@ -523,8 +524,10 @@ if counter == 2:  #<-- When only two items are selected, this head to head dashb
         #Render histogram for 2 ticker correlation analysis
         histogram_data_ = pivoted_tickers_and_data_df2['Pct_Change']
         histogram_data_['Correlation']  = histogram_data_[list_of_selected_sectors[0]].rolling(3).corr(histogram_data_[list_of_selected_sectors[1]])
-        fig = plt.figure() 
-        sns.histplot(data=histogram_data_, x='Correlation').set(title='Counts Of Correlated Periods')
+        fig = plt.figure()
+        histogram_data_["Correlation"].plot(kind='hist', title='Counts Of Correlated Periods')
+        #histogram_data_.hvplot.hist("Correlation", title = "Counts Of Correlated Periods")
+        # sns.histplot(data=histogram_data_, x='Correlation').set(title='Counts Of Correlated Periods')
         
         buffer_ = BytesIO()                     #Strange workaround for image sizing in streamlit.
         fig.savefig(buffer_, format="png")      #Saves plot as image 
@@ -538,9 +541,9 @@ if counter == 2:  #<-- When only two items are selected, this head to head dashb
         
         histogram_data_['Correlation']  = histogram_data_[list_of_selected_sectors[0]].rolling(12).corr(histogram_data_[list_of_selected_sectors[1]])
         fig = plt.figure()
-    
-        bar_plot = sns.barplot(x=histogram_data_.index, y="Correlation",  data=histogram_data_)
-        bar_plot.set(title='Correlated Periods Bar Chart')
+        bar_plot = histogram_data_["Correlation"].plot(kind='bar', title='Correlated Periods Bar Chart')
+        # bar_plot = sns.barplot(x=histogram_data_.index, y="Correlation",  data=histogram_data_)
+        # bar_plot.set(title='Correlated Periods Bar Chart')
 
         
         for index, label in enumerate(bar_plot.get_xticklabels()):    #Declutter the x-axis labels
