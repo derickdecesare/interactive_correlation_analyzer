@@ -9,6 +9,54 @@ Ray Dalio states that "With fifteen to twenty good, uncorrelated return streams,
 Our Interactive Correlation Analyzer helps solve this problem by allowing users to visualize correlations across market sectors and time horizons and to perform risk/reward analysis on different asset combinations.
 
 
+## Usage
+You can use the streamlit web application @ https://derickdecesare-interactive-correlation-ana-streamlit-app-i90gio.streamlitapp.com/
+
+To run this application locally, after cloning the repo and installing the dependencies, navigate to the application folder and type "streamlit run streamlit_app.py".  The application will open a new window in your default web browser.
+
+### Initial Page
+
+When first opening the application you will be greeted with a page with a sidebar box that prompts you to select the desired industries you'd wish to analyze. Shown below.
+
+![start](Images/start.png)
+
+### Head to Head Comparison
+If you select two industries it will populate a head to head comparison, showing multiple charts including: Counts of Correlated Periods, Correlation Over Time, Beta of Selected Sectors, and Sharpe Ratios.
+
+![two](Images/two.png)
+
+*note streamlit has an open bug out for the x axis of charts - hence why they are impossible to read. You can change the Date Range in the sidebar to make it more legible if needed.
+
+### Multi-Sector Comparison
+If you select three or more industries it will populate a multi-sector comparison, which includes, Sector Correlation Heatmap, Sector Volatility, Beta of Selected Sectors, and Sharpe Ratios.
+
+![three](Images/three.png)
+
+### Mckenzie Test
+Scroll down on the side bad and click on the McKenzie Test dropdown. You can then type in any ticker (any ticker available on yahoo fiance). This will compare the ticker you typed in to the index approximations of your current sector selections. After executing the analysis it will tell you whether adding that ticker to your approximated portfolio will increase your risk/return ratio.
+
+Below it shows adding pton to a portfolio of S&P 500 ETF, Bitcoin, and Gold ETF would not pass the McKenzie test.
+
+![mckenzie](Images/mckenzie.png)
+
+### Monte Carlo
+
+Click on the Monte Carlo dropdown in the sidebar and select the number of years and weights for the different sectors you have selected. Then click the button that says "Run Monte Carlo". that will initiate the execution of the algorithm - be patient it takes few seconds for the algorithm to go through all the iterations. 
+
+Once finished you will see the results populate. Including the Simulations Visulized:
+
+![monte1](Images/monte1.png)
+
+
+Confidence Intervals and Standard Deviation Chart
+
+![monte2](Images/monte2.png)
+
+Histogram of Final Cumulative Returns
+
+![monte3](Images/monte3.png)
+
+
 ## Technologies
 This project runs on python 3.7 and includes the following libraries and dependencies:
 
@@ -89,73 +137,6 @@ To use the application you need to install the following dependencies.
 * Altair
 * hvPlot
 
-### Analysis Outcomes: ###
-
-## Performance Analysis ##
-
-![](images/line_daily_return.png)
-
-![](images/volitility_daily_return.png)
-
-![](images/std_volitility.png)
-
-Bitcoin (cryptocurrency)and XLV(Healthcare) are the two most volatile sectors with high average returns are out perfoming the market.
-
-
-## Correlation Analysis ##
-
-![](images/corr.png)
-
-
-![](images/correlation_heatmap.png)
-
-
-
-* GLD (commodity) is the least correlated with all the other sectors.
-* Bitcoin(cryptocurrency) ,DJP(commodity)and FXN(Energy) are also very uncorrelated.
-* These sectors could be a good choice to provide cushion in the portfolio against the risk.
-
-
-## Risk Analysis ##
-
-![](images/annualized_std.png)
-
-![](images/std_volitility.png)
-
-Bitcoin is the highest risk asset with the maximum number of  the outliers and longer whiskers followed  by FXN(Energy Fund). This makes sense because Bitcoin has the highest standard deviation among all other sectors.
-
-
-## RISK-RETURN ANALYSIS ##
-
-![](images/sharp_ratio.png)
-
-![](images/bar_sharp_ratio.png)
-
-Bitcoin is having the best risk-return profile with the highest sharp ratio of 4.844 followed by QQQwhich means that from a risk-return perspective 
-they offer a considerably better investment opportunity.
-
-
-## DIVERSIFY THE PORTFOLIO WITH MCKENZIE TEST ##
-
-
-![](images/Mckenzie_test.png)
-
-![](images/MCK_test.png)
-
-![](images/mckinzie_test.png)
-
-
-## Montecarlo simulations ##
-
-![](images/monte_carlo.png)
-
-![](images/hist.png)
-
-## Interesting Findings ##
-
-![](images/Corr_comp.png)
-
-After Covid-19 market became more correlated than it was before the pendemic.
 
 ## CONCLUSION: ##
 
@@ -163,76 +144,6 @@ After Covid-19 market became more correlated than it was before the pendemic.
 * Commodity and gold sector have remained uncorrelated and may be able to contribute a good cushion in the portfolio against risk.
 * Energy sector is very promising as well in terms of correlation, volatility with low risk high return profile.
 
-
-
-
-
-## Usage
-You can use the streamlit web application @ https://derickdecesare-interactive-correlation-ana-streamlit-app-i90gio.streamlitapp.com/
-
-To run this application locally navigate to the application folder and type "streamlit run streamlit_app.py".  The application will open a new window in your default web browser.
-
-### Initial Page
-
-When first opening the application you will be greeted with a page with a sidebar box that prompts you to select the desired industries you'd wish to analyze. Shown below.
-
-![start](Images/start.png)
-
-### Head to Head Comparison
-If you select two industries it will populate a head to head comparison, showing multiple charts including: Counts of Correlated Periods, Correlation Over Time, Beta of Selected Sectors, and Sharpe Ratios.
-
-![two](Images/two.png)
-
-*note streamlit has an open bug out for the x axis of charts - hence why they are impossible to read. You can change the Date Range in the sidebar to make it more legible if needed.
-
-### Multi-Sector Comparison
-If you select three or more industries it will populate a multi-sector comparison, which includes, Sector Correlation Heatmap, Sector Volatility, Beta of Selected Sectors, and Sharpe Ratios.
-
-![three](Images/three.png)
-
-### Mckenzie Test
-Scroll down on the side bad and click on the McKenzie Test dropdown. You can then type in any ticker (any ticker available on yahoo fiance). This will compare the ticker you typed in to the index approximations of your current sector selections. After executing the analysis it will tell you whether adding that ticker to your approximated portfolio will increase your risk/return ratio.
-
-Below it shows adding pton to a portfolio of S&P 500 ETF, Bitcoin, and Gold ETF would not pass the McKenzie test.
-
-![mckenzie](Images/mckenzie.png)
-
-### Monte Carlo
-
-Click on the Monte Carlo dropdown in the sidebar and select the number of years and weights for the different sectors you have selected. Then click the button that says "Run Monte Carlo". that will initiate the execution of the algorithm - be patient it takes few seconds for the algorithm to go through all the iterations. 
-
-Once finished you will see the results populate. Including the Simulations Visulized:
-
-![monte1](Images/monte1.png)
-
-
-Confidence Intervals and Standard Deviation Chart
-
-![monte2](Images/monte2.png)
-
-Histogram of Final Cumulative Returns
-
-![monte3](Images/monte3.png)
-
-
-
-## Interesting Findings ##
-
-After Covid-19 market became more correlated than it was before the pendemic.
-
-Correlation heatmap before:
-
-![before](Images/before.png)
-
-Coorelation heatmap after:
-
-![after](Images/after.png)
-
-## CONCLUSION: ##
-
-* Crypto currency use to be  uncorrelated with the market but now its very correlated with the market.
-* Commodity and gold sector have remained uncorrelated and may be able to contribute a good cushion in the portfolio against risk.
-* Energy sector is very promising as well in terms of correlation, volatility with low risk high return profile.
 
 
 
