@@ -4,7 +4,7 @@
 
 ### De-Risk Your Portfolio With Uncorrelated Assets
 
-Ray Dalio states that "With fifteen to twenty good, uncorrelated return streams, you can dramatically reduce your risks without reducing your expected returns". Therefore, finding un-correlated assets (i.e., Prices move independently of each other) is paramount for creating an great portfolio. After the 2020 pandemic, however, correlations across sectors have increased substantialy, making uncorrelated assets increasingly difficult to find. 
+Ray Dalio states that "With fifteen to twenty good, uncorrelated return streams, you can dramatically reduce your risks without reducing your expected returns". Therefore, finding un-correlated assets (i.e., Prices move independently of each other) is paramount for creating a great portfolio. After the 2020 pandemic, however, correlations across sectors have increased substantialy, making uncorrelated assets increasingly difficult to find. 
 
 Our Interactive Correlation Analyzer helps solve this problem by allowing users to visualize correlations across market sectors and time horizons and to perform risk/reward analysis on different asset combinations.
 
