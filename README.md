@@ -1,6 +1,6 @@
 # Interactive Correlation Analyzer
 
-[![Streamlit App](https://derickdecesare-interactive-correlation-ana-streamlit-app-i90gio.streamlitapp.com/)
+[Interactive Correlation Analyzer App](https://derickdecesare-interactive-correlation-ana-streamlit-app-i90gio.streamlitapp.com/)
 
 ### De-Risk Your Portfolio With Uncorrelated Assets
 
