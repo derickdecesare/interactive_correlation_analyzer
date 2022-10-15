@@ -43,7 +43,7 @@ Below it shows adding pton to a portfolio of S&P 500 ETF, Bitcoin, and Gold ETF 
 
 ### Monte Carlo
 
-Click on the Monte Carlo dropdown in the sidebar and select the number of years and weights for the different sectors you have selected. Then click the button that says "Run Monte Carlo". that will initiate the execution of the algorithm - be patient it takes few seconds for the algorithm to go through all the iterations. 
+Click on the Monte Carlo dropdown in the sidebar and select the number of years and weights for the different sectors you have selected. Then click the button that says "Run Monte Carlo". That will initiate the execution of the algorithm - be patient it takes few seconds for the algorithm to go through all the iterations. 
 
 Once finished you will see the results populate. Including the Simulations Visulized:
 
