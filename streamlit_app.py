@@ -400,8 +400,9 @@ if counter == -1:    #Run the monte carlo
         with col2:
             pass
         with col3:
-            st.write('')
-            st.button('Reset To Main', on_click=rerun_script)
+            pass
+            # st.write('')
+            # st.button('Reset To Main', on_click=rerun_script)
         with col4:
             pass
         with col5:
