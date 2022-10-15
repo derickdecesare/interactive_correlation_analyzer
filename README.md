@@ -35,7 +35,7 @@ If you select three or more industries it will populate a multi-sector compariso
 ![three](Images/three.png)
 
 ### Mckenzie Test
-Scroll down on the side bad and click on the McKenzie Test dropdown. You can then type in any ticker (any ticker available on yahoo fiance). This will compare the ticker you typed in to the index approximations of your current sector selections. After executing the analysis it will tell you whether adding that ticker to your approximated portfolio will increase your risk/return ratio.
+Scroll down on the side bar and click on the McKenzie Test dropdown. You can then type in any ticker (any ticker available on yahoo fiance). This will compare the ticker you typed in to the index approximations of your current sector selections. After executing the analysis it will tell you whether adding that ticker to your approximated portfolio will increase your risk/return ratio.
 
 Below it shows adding pton to a portfolio of S&P 500 ETF, Bitcoin, and Gold ETF would not pass the McKenzie test.
 
