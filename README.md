@@ -1,8 +1,10 @@
 # Interactive Correlation Analyzer
 
+[![Streamlit App](https://derickdecesare-interactive-correlation-ana-streamlit-app-i90gio.streamlitapp.com/)
+
 ### De-Risk Your Portfolio With Uncorrelated Assets
 
-Ray Dalio states that "With fifteen to twenty good, uncorrelated return streams, you can dramatically reduce your risks without reducing your expected returns". Therefore, finding un-correlated assets (i.e., The price movement of one does not effect the other) is paramount for creating an great portfolio. After the 2020 pandemic however, correlations across sectors have increased substantialy, making uncorrelated assets difficult to find. 
+Ray Dalio states that "With fifteen to twenty good, uncorrelated return streams, you can dramatically reduce your risks without reducing your expected returns". Therefore, finding un-correlated assets (i.e., The price movement of one does not effect the other) is paramount for creating an great portfolio. After the 2020 pandemic, however, correlations across sectors have increased substantialy, making uncorrelated assets increasingly difficult to find. 
 
 Our Interactive Correlation Analyzer helps solve this problem by allowing users to visualize correlations across market sectors and time horizons and to perform risk/reward analysis on different asset combinations.
 
@@ -34,17 +36,22 @@ This project runs on python 3.7 and includes the following libraries and depende
 To use the application you need to install the following dependencies.
 
 ```python
-  pip install matplotlib
-  pip install pathlib
-  conda install -c anaconda requests
-  conda install -c pyviz hvplot 
-  pip install python-dotenv
-  pip install alpaca-trade-api
-  pip install altair
-  pip install seaborn
-  pip install streamlit
-  pip install pyautogui 
-  pip install plost
+    pip install streamlit==1.5.0
+    pip install pandas
+    pip install plost
+    pip install matplotlib
+    pip install pathlib
+    pip install hvplot
+    pip install numpy
+    pip install seaborn
+    pip install datetime
+    pip install requires.io
+    pip install forecast-tools
+    pip install urllib3
+    pip install altair
+    pip install python-time
+    pip install alpaca-trade-api
+    pip install python-dotenv
   
 ```
 * Make sure to use hvPlot version 0.7.0 or later.
@@ -66,9 +73,10 @@ To use the application you need to install the following dependencies.
 
 **Data Exploration:**
 
-* Daily returns
-* Cumulative returns
-* Standard deviations
+* Daily return
+* Cumulative return
+* Standard deviation
+* Correlation
 * Sharp ratio 
 * Beta
 * Mckenzie test
@@ -160,43 +168,81 @@ After Covid-19 market became more correlated than it was before the pendemic.
 
 
 ## Usage
+You can use the streamlit web application @ https://derickdecesare-interactive-correlation-ana-streamlit-app-i90gio.streamlitapp.com/
 
-To use this application navigate to the application folder and type "streamlit run streamlit_app.py".  The application will open a new window in your default web browser AT http://localhost:8501/.  
+To run this application locally navigate to the application folder and type "streamlit run streamlit_app.py".  The application will open a new window in your default web browser.
 
-## Dashboard
+### Initial Page
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/dashboard)
+When first opening the application you will be greeted with a page with a sidebar box that prompts you to select the desired industries you'd wish to analyze. Shown below.
+
+![start](Images/start.png)
+
+### Head to Head Comparison
+If you select two industries it will populate a head to head comparison, showing multiple charts including: Counts of Correlated Periods, Correlation Over Time, Beta of Selected Sectors, and Sharpe Ratios.
+
+![two](Images/two.png)
+
+*note streamlit has an open bug out for the x axis of charts - hence why they are impossible to read. You can change the Date Range in the sidebar to make it more legible if needed.
+
+### Multi-Sector Comparison
+If you select three or more industries it will populate a multi-sector comparison, which includes, Sector Correlation Heatmap, Sector Volatility, Beta of Selected Sectors, and Sharpe Ratios.
+
+![three](Images/three.png)
+
+### Mckenzie Test
+Scroll down on the side bad and click on the McKenzie Test dropdown. You can then type in any ticker (any ticker available on yahoo fiance). This will compare the ticker you typed in to the index approximations of your current sector selections. After executing the analysis it will tell you whether adding that ticker to your approximated portfolio will increase your risk/return ratio.
+
+Below it shows adding pton to a portfolio of S&P 500 ETF, Bitcoin, and Gold ETF would not pass the McKenzie test.
+
+![mckenzie](Images/mckenzie.png)
+
+### Monte Carlo
+
+Click on the Monte Carlo dropdown in the sidebar and select the number of years and weights for the different sectors you have selected. Then click the button that says "Run Monte Carlo". that will initiate the execution of the algorithm - be patient it takes few seconds for the algorithm to go through all the iterations. 
+
+Once finished you will see the results populate. Including the Simulations Visulized:
+
+![monte1](Images/monte1.png)
+
+
+Confidence Intervals and Standard Deviation Chart
+
+![monte2](Images/monte2.png)
+
+Histogram of Final Cumulative Returns
+
+![monte3](Images/monte3.png)
 
 
 
+## Interesting Findings ##
 
-## Usage Example##
+After Covid-19 market became more correlated than it was before the pendemic.
 
-![](images/app_1.png)
+Correlation heatmap before:
 
-![](images/app_2.png)
+![before](Images/before.png)
 
-![](images/app_3.png)
+Coorelation heatmap after:
 
-![](images/app_4.png)
+![after](Images/after.png)
 
-![](images/app_5.png)
+## CONCLUSION: ##
 
-![](images/app_6.png)
+* Crypto currency use to be  uncorrelated with the market but now its very correlated with the market.
+* Commodity and gold sector have remained uncorrelated and may be able to contribute a good cushion in the portfolio against risk.
+* Energy sector is very promising as well in terms of correlation, volatility with low risk high return profile.
 
-![](images/app_7.png)
 
-![](images/app_8.png)
-
-![](images/app_9.png)
 
 **What can be improved**
 
-* Add more functionality that will allow users to select custom sectors.
+* Graphs that display x axis more effectivly.
 
 * Add more analytics tools.
 
-* Improve interactivity with the graph.
+* Improve interactivity with the graphs.
 
 
 ## Contributers

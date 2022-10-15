@@ -542,7 +542,8 @@ if counter == 2:  #<-- When only two items are selected, this head to head dashb
         
         histogram_data_['Correlation']  = histogram_data_[list_of_selected_sectors[0]].rolling(12).corr(histogram_data_[list_of_selected_sectors[1]])
         fig = plt.figure()
-        bar_plot = histogram_data_["Correlation"].plot(kind='bar', title='Correlated Periods Bar Chart')
+        bar_plot = histogram_data_["Correlation"].plot(kind='bar', title='Correlation Over Time', rot=0)
+
         # bar_plot = sns.barplot(x=histogram_data_.index, y="Correlation",  data=histogram_data_)
         # bar_plot.set(title='Correlated Periods Bar Chart')
 
